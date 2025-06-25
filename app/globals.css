@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +9,7 @@
 }
 
 body {
-  font-family: "Orbitron", monospace;
+  font-family: "SF Pro Display", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
   background: #000;
   color: #fff;
   overflow-x: hidden;
