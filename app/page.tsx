@@ -574,38 +574,72 @@ export default function VirtualScienceCentrum() {
           {/* Analytics Dashboard */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
             {/* Live Chart */}
-            <div className="bg-gradient-to-br from-gray-900/50 to-green-900/20 rounded-2xl p-6 border border-gray-800">
+            <div className="bg-gradient-to-br from-gray-900/50 to-green-900/20 rounded-2xl p-6 border border-gray-800 hover:border-green-500/50 transition-all duration-500 transform hover:scale-105 animate-float">
               <h3 className="text-xl font-bold text-white mb-6">Real-Time Data Visualization</h3>
-              <div className="bg-black/50 rounded-xl p-4 h-64 flex items-center justify-center">
-                <div className="text-center text-gray-400">
-                  <svg
-                    className="w-16 h-16 mx-auto mb-4 opacity-50"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                    />
-                  </svg>
-                  <p>Interactive Chart Placeholder</p>
+              <div className="bg-black/50 rounded-xl p-4 h-64 flex items-center justify-center relative overflow-hidden">
+                {/* Animated Chart Bars */}
+                <div className="flex items-end gap-2 z-10">
+                  <div
+                    className="w-4 h-16 bg-gradient-to-t from-blue-600 to-blue-400 rounded-t animate-bounce"
+                    style={{ animationDelay: "0s" }}
+                  ></div>
+                  <div
+                    className="w-4 h-24 bg-gradient-to-t from-green-600 to-green-400 rounded-t animate-bounce"
+                    style={{ animationDelay: "0.2s" }}
+                  ></div>
+                  <div
+                    className="w-4 h-12 bg-gradient-to-t from-purple-600 to-purple-400 rounded-t animate-bounce"
+                    style={{ animationDelay: "0.4s" }}
+                  ></div>
+                  <div
+                    className="w-4 h-20 bg-gradient-to-t from-red-600 to-red-400 rounded-t animate-bounce"
+                    style={{ animationDelay: "0.6s" }}
+                  ></div>
+                  <div
+                    className="w-4 h-8 bg-gradient-to-t from-yellow-600 to-yellow-400 rounded-t animate-bounce"
+                    style={{ animationDelay: "0.8s" }}
+                  ></div>
+                  <div
+                    className="w-4 h-18 bg-gradient-to-t from-cyan-600 to-cyan-400 rounded-t animate-bounce"
+                    style={{ animationDelay: "1s" }}
+                  ></div>
                 </div>
+
+                {/* Animated Grid Lines */}
+                <div className="absolute inset-0 opacity-20">
+                  <div className="absolute top-1/4 left-0 right-0 h-px bg-gray-500 animate-pulse"></div>
+                  <div
+                    className="absolute top-2/4 left-0 right-0 h-px bg-gray-500 animate-pulse"
+                    style={{ animationDelay: "0.5s" }}
+                  ></div>
+                  <div
+                    className="absolute top-3/4 left-0 right-0 h-px bg-gray-500 animate-pulse"
+                    style={{ animationDelay: "1s" }}
+                  ></div>
+                </div>
+
+                {/* Floating Data Points */}
+                <div className="absolute top-4 right-4 w-3 h-3 bg-green-400 rounded-full animate-ping"></div>
+                <div className="absolute top-8 left-8 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                <div className="absolute bottom-8 right-8 w-2 h-2 bg-purple-400 rounded-full animate-bounce"></div>
               </div>
               <div className="mt-4 flex items-center justify-between">
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
                     <span className="text-sm text-gray-300">Temperature</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                    <div
+                      className="w-3 h-3 bg-red-400 rounded-full animate-pulse"
+                      style={{ animationDelay: "0.5s" }}
+                    ></div>
                     <span className="text-sm text-gray-300">Pressure</span>
                   </div>
                 </div>
-                <Button className="bg-green-600 hover:bg-green-700 text-sm">Export Data</Button>
+                <Button className="bg-green-600 hover:bg-green-700 text-sm transform hover:scale-105 transition-all duration-300">
+                  Export Data
+                </Button>
               </div>
             </div>
 
